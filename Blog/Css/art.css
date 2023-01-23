@@ -1,0 +1,95 @@
+*
+{
+	padding: 0;
+	margin: 0;
+
+}
+.arts
+{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	background:black;
+	width:100%;
+	height:auto;	
+}
+.art
+{
+	
+	margin: 80px;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	text-align: center;
+	color: white;
+	
+	box-shadow: 0 0 20px gray;
+	transition: 0.5s;
+}
+.art:hover{
+	
+	box-shadow: 0 0 30px gray;
+	transition: 0.5s;
+	transform: scale(1.05);
+}
+.pr
+{
+	background:black;
+}
+
+
+
+ a {
+	line-height: 44px;
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+}
+
+ a span {
+	position: relative;
+	display: inline-block;
+	padding: 0 14px;
+	background:red;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+ a span::before {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: purple;
+	content: attr(data-hover);
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	transition: background 0.3s;
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+}
+
+ a:hover span,
+ a:focus span {
+	-webkit-transform: rotateX(90deg) translateY(-22px);
+	-moz-transform: rotateX(90deg) translateY(-22px);
+	transform: rotateX(90deg) translateY(-22px);
+}
+
+.csstransforms3d  a:hover span::before,
+.csstransforms3d  a:focus span::before {
+		
+}
